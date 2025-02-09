@@ -1,5 +1,5 @@
 CC = gcc
-BASE_DIR = ./
+BASE_DIR = ./console
 BUILD_DIR = ./build
 
 ALL_C = $(wildcard $(BASE_DIR)/*.c)  
