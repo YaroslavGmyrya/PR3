@@ -13,4 +13,5 @@ check-format:
 build:
   stage: build
   script:
+    - ls -R
     - make -C console
