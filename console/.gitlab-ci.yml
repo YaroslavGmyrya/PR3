@@ -13,4 +13,4 @@ check-format:
 build:
   stage: build
   script:
-    - make
+    - make -f Makefile
