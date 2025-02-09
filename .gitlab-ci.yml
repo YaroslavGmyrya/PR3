@@ -14,4 +14,4 @@ build:
   stage: build
   script:
     - ls -l
-    - make -f Makefile
+    - make
