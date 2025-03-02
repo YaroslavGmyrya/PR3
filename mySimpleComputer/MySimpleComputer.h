@@ -6,8 +6,6 @@
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <unistd.h>  
-
-
 #define MAX_LINES 10  
 #define MAX_STR_LEN 20 
 #define P 0x1 
@@ -16,17 +14,11 @@
 #define T 0x8 
 #define E 0x10 
 #define SIZE 128
-
 extern const int SIZE_COMMAND; 
-
-extern int memory[SIZE]; 
-
-extern int accumulator; 
-
-extern int command_counter; 
-
+extern int memory[SIZE];
+extern int accumulator;
+extern int command_counter;
 extern int flags_register;
-
 int sc_memoryInit (void);
 int sc_memorySet (int address, int value);
 int sc_memoryGet (int address, int *value);
