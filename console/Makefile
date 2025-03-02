@@ -5,9 +5,9 @@ BUILD_DIR = ./build
 ALL_C = $(wildcard $(BASE_DIR)/*.c)  
 ALL_O = $(patsubst $(BASE_DIR)/%.c, $(BUILD_DIR)/%.o, $(ALL_C))
 
-all: $(BUILD_DIR)/console
+all: $(BUILD_DIR)/console.out
 
-$(BUILD_DIR)/console: $(ALL_O) | $(BUILD_DIR)
+$(BUILD_DIR)/console.out: $(ALL_O) | $(BUILD_DIR)
 	$(CC) $(ALL_O) -o $@
 
 $(BUILD_DIR)/%.o: $(BASE_DIR)/%.c | $(BUILD_DIR)
