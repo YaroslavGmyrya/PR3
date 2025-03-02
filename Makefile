@@ -1,3 +1,3 @@
 all:
-	./console/build/console
-	./mySimpleComputer/pr2
+	./console/build/console.out
+	./mySimpleComputer/pr2.out
