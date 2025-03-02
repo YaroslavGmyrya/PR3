@@ -16,11 +16,11 @@
 #define E 0x10 
 #define SIZE 128
 
-extern const int SIZE_COMMAND; 
+ extern const int SIZE_COMMAND; 
 
-extern int memory[SIZE]; 
+ extern int memory[SIZE]; 
 
-extern int accumulator; 
+ extern int accumulator; 
 
 extern int command_counter; 
 
