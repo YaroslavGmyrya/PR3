@@ -1,5 +1,4 @@
-#include "sc_icounterHeader.h"
-#include "sc_mainHeader.h"
+#include "./MySimpleComputer.h"
 
 int
 sc_icounterGet (int *value)

@@ -1,4 +1,4 @@
-#include "sc_memoryHeader.h"
+#include "./MySimpleComputer.h"
 
 const int SIZE_COMMAND = 15;
 int memory[SIZE];

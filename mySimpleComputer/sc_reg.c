@@ -1,5 +1,4 @@
-#include "sc_regHeader.h"
-#include "sc_mainHeader.h"
+#include "./MySimpleComputer.h"
 
 int
 sc_regGet (int reg, int *value)

@@ -1,5 +1,4 @@
-#include "sc_commandHeader.h"
-#include "sc_mainHeader.h"
+#include "./MySimpleComputer.h"
 
 int
 sc_commandDecode (int value, int *sign, int *command, int *operand)

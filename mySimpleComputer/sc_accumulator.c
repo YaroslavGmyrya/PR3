@@ -1,5 +1,4 @@
-#include "sc_accumulatorHeader.h"
-#include "sc_mainHeader.h"
+#include "./MySimpleComputer.h"
 
 extern int accumulator; 
 

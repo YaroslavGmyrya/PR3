@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-#include "sc_accumulatorHeader.h"
-#include "sc_commandHeader.h"
-#include "sc_icounterHeader.h"
-#include "sc_memoryHeader.h"
-#include "sc_regHeader.h"
-#include "sc_mainHeader.h"
-=======
-#include "../includes/MySimpleComputer.h"
->>>>>>> 44a2e9a0f70aa78447e2a80a4fd70b64ec9304a1
+#include "./MySimpleComputer.h"
 
 int
 main ()
