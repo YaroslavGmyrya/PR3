@@ -1,30 +1,30 @@
-  #pragma once
+#pragma once
 
-  #include <stdio.h>
-  #include <termios.h>
-  #include <sys/ioctl.h>
-  #include <unistd.h>  
-  #include <stdlib.h>  
-  #include <string.h>
+#include <stdio.h>
+#include <termios.h>
+#include <sys/ioctl.h>
+#include <unistd.h>  
+#include <stdlib.h>  
+#include <string.h>
 
-  #define MAX_LINES 10  
-  #define MAX_STR_LEN 20 
-  #define P 0x1 
-  #define Z 0x2 
-  #define M 0x4 
-  #define T 0x8 
-  #define E 0x10 
-  #define SIZE 128
+#define MAX_LINES 10  
+#define MAX_STR_LEN 20 
+#define P 0x1 
+#define Z 0x2 
+#define M 0x4 
+#define T 0x8 
+#define E 0x10 
+#define SIZE 128
 
-  extern const int SIZE_COMMAND; 
+extern const int SIZE_COMMAND; 
 
-  extern int memory[SIZE]; 
- 
-  extern int accumulator; 
+extern int memory[SIZE]; 
 
-  extern int command_counter; 
+extern int accumulator; 
 
-  extern int flags_register;
+extern int command_counter; 
+
+extern int flags_register;
 
 int sc_memoryInit (void);
 int sc_memorySet (int address, int value);
