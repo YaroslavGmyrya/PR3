@@ -16,7 +16,9 @@
 #define SIZE 128
 extern const int SIZE_COMMAND;
 extern int memory[SIZE];
+
 extern int accumulator;
+
 extern int command_counter;
 extern int flags_register;
 int sc_memoryInit (void);
