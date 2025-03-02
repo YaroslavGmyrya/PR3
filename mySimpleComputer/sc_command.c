@@ -77,5 +77,3 @@ sc_printDecodedCommand (int value)
   printf ("HEX: %x   bin: ", value);
   sc_printBinary (value);
 }
-
-

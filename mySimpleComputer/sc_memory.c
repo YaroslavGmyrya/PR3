@@ -79,4 +79,3 @@ sc_memorySet (int address, int value)
   memory[address] = value;
   return 0;
 }
-

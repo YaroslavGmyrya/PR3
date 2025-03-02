@@ -16,14 +16,14 @@ sc_regGet (int reg, int *value)
   return 0;
 }
 
-int 
+int
 sc_regInit (void)
 {
   flags_register = 0;
   return 0;
 }
 
-int 
+int
 sc_regSet (int reg, int value)
 {
   if ((reg != P && reg != Z && reg != M && reg != T && reg != E)
