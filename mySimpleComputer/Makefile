@@ -11,7 +11,6 @@ all: $(TARGET)
 
 $(TARGET): main.o lib$(LIB_NAME).a
 	gcc -o $(TARGET) main.o -L. -l$(LIB_NAME)
-	./pr2
 
 lib$(LIB_NAME).a: $(OBJ)
 	ar rcs lib$(LIB_NAME).a $(OBJ)
