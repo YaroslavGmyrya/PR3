@@ -1,7 +1,5 @@
 #include "./MySimpleComputer.h"
 
-extern int accumulator; 
-
 int
 sc_accumulatorGet (int *value)
 {
