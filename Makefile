@@ -7,3 +7,7 @@ console.out:
 
 pr2.out:
 	$(MAKE) -C mySimpleComputer
+
+clean:
+	make clean -C console
+	make clean -C mySimpleComputer
