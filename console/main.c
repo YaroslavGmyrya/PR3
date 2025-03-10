@@ -1,4 +1,4 @@
-#include "./MySimpleComputer.h"
+#include "../include/MySimpleComputer.h"
 
 int
 main ()

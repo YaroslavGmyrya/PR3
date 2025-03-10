@@ -1,4 +1,4 @@
-#include "./MySimpleComputer.h"
+#include "../include/MySimpleComputer.h"
 
 const int SIZE_COMMAND = 15;
 int memory[SIZE];

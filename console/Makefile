@@ -1,22 +1,16 @@
-CC = gcc
-BASE_DIR = ./
-BUILD_DIR = ./build
+all: console.out main.out
 
-ALL_C = $(wildcard $(BASE_DIR)/*.c)  
-ALL_O = $(patsubst $(BASE_DIR)/%.c, $(BUILD_DIR)/%.o, $(ALL_C))
+console.out: console.c
+	gcc -o console.out console.c
 
-all: $(BUILD_DIR)/console.out
-
-$(BUILD_DIR)/console.out: $(ALL_O) | $(BUILD_DIR)
-	$(CC) $(ALL_O) -o $@
-
-$(BUILD_DIR)/%.o: $(BASE_DIR)/%.c | $(BUILD_DIR)
-	$(CC) -c $< -o $@
-
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+main.out: main.c
+	gcc -o main.out main.c -L../mySimpleComputer/ -lmylib
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -f console.out main.out
 
-.PHONY: all clean
+run: all
+	./console.out
+	./main.out
+
+.PHONY: all clean run
