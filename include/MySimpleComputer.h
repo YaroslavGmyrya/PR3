@@ -6,6 +6,8 @@
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <unistd.h>
+#include "./myTerm.h"
+
 #define MAX_LINES 10
 #define MAX_STR_LEN 20
 #define P 0x1
