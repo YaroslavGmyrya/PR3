@@ -19,6 +19,8 @@ main ()
   sc_memorySet (-1, 50);
   sc_memorySet (55, 50);
 
+  sc_memorySet(32, -32000);
+
   printf ("Memory content:");
 
   for (int i = 0; i < SIZE; i++)
