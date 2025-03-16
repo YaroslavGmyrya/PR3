@@ -1,10 +1,13 @@
 all:
-	$(MAKE) -C mySimpleComputer
-	$(MAKE) -C console
+	make -C mySimpleComputer
+	make -C myTerm
+
+	gcc ./myTerm/console.c -o main.out -L./myTerm -L./mySimpleComputer -lmyTermLib -lmySimpleLib -lm
 
 clean:
-	make clean -C console
+	rm -f *.a
 	make clean -C mySimpleComputer
+	make clean -C myTerm
 
 run:
-	make run -C console
+	./main.out
