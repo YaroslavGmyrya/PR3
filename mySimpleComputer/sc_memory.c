@@ -2,7 +2,7 @@
 #include "../include/myTerm.h"
 
 int
-sc_memoryGet(int address, int *value) 
+sc_memoryGet (int address, int *value) 
 { 
     if (address >= SIZE || address < 0 || !value) 
     { 
@@ -14,7 +14,7 @@ sc_memoryGet(int address, int *value)
 } 
 
 int
-sc_memoryInit(void) 
+sc_memoryInit (void) 
 { 
     for (int i = 0; i < SIZE; i++) 
     { 
@@ -24,22 +24,22 @@ sc_memoryInit(void)
 } 
 
 int
-sc_memoryLoad(char *filename) 
+sc_memoryLoad (char *filename) 
 { 
 
     if (!filename)
       return -1;
 
-    FILE *file = fopen(filename, "rb"); 
+    FILE *file = fopen (filename, "rb"); 
  
     if (!file) 
     { 
         return -1; 
     } 
  
-    int result = fread(memory, sizeof(int), SIZE, file); 
+    int result = fread (memory, sizeof(int), SIZE, file); 
 
-    fclose(file); 
+    fclose (file); 
  
     if (result < SIZE) 
     { 
@@ -50,22 +50,22 @@ sc_memoryLoad(char *filename)
 }
 
 int
-sc_memorySave(char *filename) 
+sc_memorySave (char *filename) 
 { 
 
     if (!filename)
         return -1;
 
-    FILE *file = fopen(filename, "wb"); 
+    FILE *file = fopen (filename, "wb"); 
  
     if (!file) 
     { 
         return -1; 
     } 
  
-    int result = fwrite(memory, sizeof(int), SIZE, file); 
+    int result = fwrite (memory, sizeof(int), SIZE, file); 
 
-    fclose(file); 
+    fclose (file); 
  
     if (result < SIZE) 
     { 
@@ -76,7 +76,7 @@ sc_memorySave(char *filename)
 }
 
 int
-sc_memorySet(int address, int value) 
+sc_memorySet (int address, int value) 
 { 
     if (address >= SIZE && value >= 0x800) 
     { 
@@ -99,10 +99,10 @@ sc_printCell (int address, enum colors fg, enum colors bg)
         return; 
     } 
 
-    mt_setfgcolor(fg);
-    mt_setbgcolor(bg);
-    mt_gotoXY(row, col);
+    mt_setfgcolor (fg);
+    mt_setbgcolor (bg);
+    mt_gotoXY (row, col);
     
-    printf("%d", memory[address]); 
+    printf ("%d", memory[address]); 
 
 }

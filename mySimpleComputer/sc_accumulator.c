@@ -2,7 +2,7 @@
 #include "../include/myTerm.h"
 
 int
-sc_accumulatorGet(int *value) 
+sc_accumulatorGet (int *value) 
 { 
     if (!value) 
     { 
@@ -14,14 +14,14 @@ sc_accumulatorGet(int *value)
 } 
 
 int
-sc_accumulatorInit(void) 
+sc_accumulatorInit (void) 
 { 
     accumulator = 0; 
     return 0; 
 } 
 
 int
-sc_accumulatorSet(int value) 
+sc_accumulatorSet (int value) 
 { 
     if (value >= 0x800) 
     { 
@@ -33,10 +33,10 @@ sc_accumulatorSet(int value)
 } 
 
 void
-sc_printAccumulator(void) 
+sc_printAccumulator (void) 
 { 
     int value; 
-    sc_accumulatorGet(&value);
-    mt_gotoXY(2, 100); 
-    printf("sc: %d hex: %x\n", value, value); 
+    sc_accumulatorGet (&value);
+    mt_gotoXY (2, 100); 
+    printf ("sc: %d hex: %x\n", value, value); 
 } 

@@ -2,7 +2,7 @@
 #include "../include/myTerm.h"
 
 int
-sc_regGet(int reg, int *value) 
+sc_regGet (int reg, int *value) 
 { 
 
     if ((reg != P && reg != Z && reg != M && reg != T && reg != E) || !value) 
@@ -20,7 +20,7 @@ sc_regGet(int reg, int *value)
 }
 
 int
-sc_regSet(int reg, int value) 
+sc_regSet (int reg, int value) 
 { 
 
    if ((reg != P && reg != Z && reg != M && reg != T && reg != E) || (value != 0 && value != 1)) 
@@ -37,7 +37,8 @@ sc_regSet(int reg, int value)
 }
 
 int
-sc_regInit(void) { 
+sc_regInit (void) 
+{ 
 
     flags_register = 0; 
 
@@ -45,7 +46,7 @@ sc_regInit(void) {
 } 
 
 void
-sc_printFlags(void) 
+sc_printFlags (void) 
 {
     int value_P;
     int value_Z;
@@ -56,15 +57,15 @@ sc_printFlags(void)
     int rows;
     int cols;
 
-    mt_getscreensize(&rows, &cols);
+    mt_getscreensize (&rows, &cols);
 
-    mt_gotoXY(2, cols - 30);
+    mt_gotoXY (2, cols - 30);
 
-    sc_regGet(P, &value_P);
-    sc_regGet(Z, &value_Z);
-    sc_regGet(M, &value_M);
-    sc_regGet(T, &value_T);
-    sc_regGet(E, &value_E);
+    sc_regGet (P, &value_P);
+    sc_regGet (Z, &value_Z);
+    sc_regGet (M, &value_M);
+    sc_regGet (T, &value_T);
+    sc_regGet (E, &value_E);
 
     value_P ? printf("P ") : printf("_ ");
     value_Z ? printf("Z ") : printf("_ ");
@@ -73,5 +74,5 @@ sc_printFlags(void)
     value_E ? printf("E ") : printf("_ ");
 
    
-    mt_setdefaultcolor();
+    mt_setdefaultcolor ();
 }

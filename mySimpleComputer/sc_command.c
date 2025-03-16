@@ -2,7 +2,7 @@
 #include "../include/myTerm.h"
 
 int
-sc_commandDecode(int value, int *sign, int *command, int *operand) 
+sc_commandDecode (int value, int *sign, int *command, int *operand) 
 { 
     if (!sign || !operand) 
     { 
@@ -22,7 +22,7 @@ sc_commandDecode(int value, int *sign, int *command, int *operand)
 }
 
 int
-sc_commandEncode(int sign, int command, int operand, int *value) 
+sc_commandEncode (int sign, int command, int operand, int *value) 
 {
     if (!value) return -1;
 
@@ -54,7 +54,7 @@ sc_commandEncode(int sign, int command, int operand, int *value)
 }
 
 int
-sc_commandValidate(int command) 
+sc_commandValidate (int command) 
 { 
     if (command >= 0x800) 
     { 
@@ -65,28 +65,28 @@ sc_commandValidate(int command)
 } 
 
 void
-sc_printBinary(int number) 
+sc_printBinary (int number) 
 { 
     for (int i = 14; i >= 0; i--) 
     { 
         int bit = (number >> i) & 1; 
-        printf("%d", bit); 
+        printf ("%d", bit); 
     } 
-    printf("\n"); 
+    printf ("\n"); 
 } 
 
 void
-sc_printDecodedCommand(int value) 
+sc_printDecodedCommand (int value) 
 { 
-    mt_gotoXY(20, 5);
-    printf("DEC: %d | ", value); 
-    printf("OCT: %o | ", value); 
-    printf("HEX: %x   bin: ", value); 
-    sc_printBinary(value); 
+    mt_gotoXY (20, 5);
+    printf ("DEC: %d | ", value); 
+    printf ("OCT: %o | ", value); 
+    printf ("HEX: %x   bin: ", value); 
+    sc_printBinary (value); 
 }
 
 void 
-sc_printCommand()
+sc_printCommand ()
 {
     int value;
     int sign;
@@ -94,26 +94,26 @@ sc_printCommand()
     int operand;
     int row,col;
 
-    mt_getscreensize(&row, &col);
-    mt_gotoXY(7, col - 29);
+    mt_getscreensize (&row, &col);
+    mt_gotoXY (7, col - 29);
     if (command_counter < SIZE && command_counter >= 0)
     {
-        sc_memoryGet(command_counter,&value);
-        sc_commandDecode(value, &sign, &command, &operand);
+        sc_memoryGet (command_counter,&value);
+        sc_commandDecode (value, &sign, &command, &operand);
 
         if (sign)
         {
-            printf("- %x : %x", command, operand);
+            printf ("- %x : %x", command, operand);
         }
 
         else
         {
-            printf("+ %x : %x", command, operand);
+            printf ("+ %x : %x", command, operand);
         }
     }
 
     else
     {
-        printf("! + FF : FF");
+        printf ("! + FF : FF");
     }
 }

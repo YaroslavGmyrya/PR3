@@ -1,13 +1,13 @@
 #pragma once
 
+#include <math.h>
+#include "./myTerm.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/ioctl.h>
 #include <termios.h>
 #include <unistd.h>
-#include <math.h>
-#include "./myTerm.h"
 
 #define MAX_LINES 10
 #define MAX_STR_LEN 20
@@ -55,7 +55,7 @@ int sc_memoryGet (int address, int *value);
 int sc_memorySave (char *filename);
 int sc_memoryLoad (char *filename);
 void sc_printCell (int address, enum colors fg, enum colors bg);
-void sc_printCommand();
+void sc_printCommand ();
 void sc_addIOEntry (int address, char type, int value);
-void sc_printTerm();
-void sc_printCounter(void);
+void sc_printTerm ();
+void sc_printCounter (void);
