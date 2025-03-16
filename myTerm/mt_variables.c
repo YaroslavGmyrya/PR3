@@ -10,4 +10,4 @@ char* COLORS_BG_STORAGE[] = {
     "\033[100m", "\033[101m", "\033[102m", "\033[103m", "\033[104m", "\033[105m", "\033[106m", "\033[107m"
 };
 
-IOEntry io_log[MAX_LINES]; 
+IOEntry io_log[MAX_LINES];

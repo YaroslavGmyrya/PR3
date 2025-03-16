@@ -10,8 +10,10 @@ main ()
     if (!isatty(1))
         return -1;
 
-    if (ioctl(1, TIOCGWINSZ, &ws) == -1){
-        if (ws.ws_row < MIN_H || ws.ws_col < MIN_W){
+    if (ioctl(1, TIOCGWINSZ, &ws) == -1)
+    {
+        if (ws.ws_row < MIN_H || ws.ws_col < MIN_W)
+        {
             printf("Window of terminal is small: %dx%d", ws.ws_row, ws.ws_col);
             return -1;
         }
@@ -39,10 +41,10 @@ main ()
     for(int i = 0; i < 7; i++)
     {
         int rand_value = rand() % 128;
-        sc_addIOEntry(rand_value, '>', memory[rand_value]);  
+        sc_addIOEntry(rand_value, '>', memory[rand_value]);
     }
 
     sc_printTerm();
    
-    mt_setdefaultcolor(); 
+    mt_setdefaultcolor();
 }

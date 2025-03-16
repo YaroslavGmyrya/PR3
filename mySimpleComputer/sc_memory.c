@@ -2,8 +2,10 @@
 #include "../include/myTerm.h"
 
 int
-sc_memoryGet(int address, int *value) { 
-    if (address >= SIZE || address < 0 || !value) { 
+sc_memoryGet(int address, int *value) 
+{ 
+    if (address >= SIZE || address < 0 || !value) 
+    { 
         return -1; 
     } 
  
@@ -12,22 +14,26 @@ sc_memoryGet(int address, int *value) {
 } 
 
 int
-sc_memoryInit(void) { 
-    for (int i = 0; i < SIZE; i++) { 
+sc_memoryInit(void) 
+{ 
+    for (int i = 0; i < SIZE; i++) 
+    { 
         memory[i] = 0; 
     } 
     return 0; 
 } 
 
 int
-sc_memoryLoad(char *filename) { 
+sc_memoryLoad(char *filename) 
+{ 
 
-     if (!filename)
-        return -1;
+    if (!filename)
+      return -1;
 
     FILE *file = fopen(filename, "rb"); 
  
-    if (!file) { 
+    if (!file) 
+    { 
         return -1; 
     } 
  
@@ -35,7 +41,8 @@ sc_memoryLoad(char *filename) {
 
     fclose(file); 
  
-    if (result < SIZE) { 
+    if (result < SIZE) 
+    { 
         return -1; 
     } 
  
@@ -43,14 +50,16 @@ sc_memoryLoad(char *filename) {
 }
 
 int
-sc_memorySave(char *filename) { 
+sc_memorySave(char *filename) 
+{ 
 
     if (!filename)
         return -1;
 
     FILE *file = fopen(filename, "wb"); 
  
-    if (!file) { 
+    if (!file) 
+    { 
         return -1; 
     } 
  
@@ -58,7 +67,8 @@ sc_memorySave(char *filename) {
 
     fclose(file); 
  
-    if (result < SIZE) { 
+    if (result < SIZE) 
+    { 
         return -1; 
     } 
  
@@ -66,8 +76,10 @@ sc_memorySave(char *filename) {
 }
 
 int
-sc_memorySet(int address, int value) { 
-    if (address >= SIZE && value >= 0x800) { 
+sc_memorySet(int address, int value) 
+{ 
+    if (address >= SIZE && value >= 0x800) 
+    { 
         return -1; 
     } 
  

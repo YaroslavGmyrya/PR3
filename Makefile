@@ -5,7 +5,7 @@ all:
 	gcc ./myTerm/console.c -o main.out -L./myTerm -L./mySimpleComputer -lmyTermLib -lmySimpleLib -lm
 
 clean:
-	rm -f *.a
+	rm -f *.a *.out
 	make clean -C mySimpleComputer
 	make clean -C myTerm
 

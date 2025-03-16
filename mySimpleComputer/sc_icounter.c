@@ -2,7 +2,8 @@
 #include "../include/myTerm.h"
 
 int
-sc_icounterGet(int *value) { 
+sc_icounterGet(int *value) 
+{ 
     if (!value) { 
         return -1; 
     } 
@@ -12,14 +13,17 @@ sc_icounterGet(int *value) {
 } 
 
 int
-sc_icounterInit(void) { 
+sc_icounterInit(void) 
+{ 
     command_counter = 0; 
     return 0; 
 } 
 
 int
-sc_icounterSet(int value) { 
-    if (value >= 0x800) {  // 0x800 = pow(2,15) 
+sc_icounterSet(int value) 
+{ 
+    if (value >= 0x800) 
+    {  
         return -1; 
     } 
  

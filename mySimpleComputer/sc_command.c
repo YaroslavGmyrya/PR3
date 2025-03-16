@@ -2,8 +2,10 @@
 #include "../include/myTerm.h"
 
 int
-sc_commandDecode(int value, int *sign, int *command, int *operand) { 
-    if (!sign || !operand) { 
+sc_commandDecode(int value, int *sign, int *command, int *operand) 
+{ 
+    if (!sign || !operand) 
+    { 
         return -1; 
     } 
 
@@ -20,7 +22,8 @@ sc_commandDecode(int value, int *sign, int *command, int *operand) {
 }
 
 int
-sc_commandEncode(int sign, int command, int operand, int *value) {
+sc_commandEncode(int sign, int command, int operand, int *value) 
+{
     if (!value) return -1;
 
     if (sign != 0 && sign != 1) { 
@@ -51,8 +54,10 @@ sc_commandEncode(int sign, int command, int operand, int *value) {
 }
 
 int
-sc_commandValidate(int command) { 
-    if (command >= 0x800) { 
+sc_commandValidate(int command) 
+{ 
+    if (command >= 0x800) 
+    { 
         return -1; 
     } 
  
@@ -60,8 +65,10 @@ sc_commandValidate(int command) {
 } 
 
 void
-sc_printBinary(int number) { 
-    for (int i = 14; i >= 0; i--) { 
+sc_printBinary(int number) 
+{ 
+    for (int i = 14; i >= 0; i--) 
+    { 
         int bit = (number >> i) & 1; 
         printf("%d", bit); 
     } 
@@ -69,7 +76,8 @@ sc_printBinary(int number) {
 } 
 
 void
-sc_printDecodedCommand(int value) { 
+sc_printDecodedCommand(int value) 
+{ 
     mt_gotoXY(20, 5);
     printf("DEC: %d | ", value); 
     printf("OCT: %o | ", value); 

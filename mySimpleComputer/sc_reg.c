@@ -2,9 +2,11 @@
 #include "../include/myTerm.h"
 
 int
-sc_regGet(int reg, int *value) { 
+sc_regGet(int reg, int *value) 
+{ 
 
-    if ((reg != P && reg != Z && reg != M && reg != T && reg != E) || !value) {
+    if ((reg != P && reg != Z && reg != M && reg != T && reg != E) || !value) 
+    {
         return -1;
     }
 
@@ -18,11 +20,13 @@ sc_regGet(int reg, int *value) {
 }
 
 int
-sc_regSet(int reg, int value) { 
+sc_regSet(int reg, int value) 
+{ 
 
-   if ((reg != P && reg != Z && reg != M && reg != T && reg != E) || (value != 0 && value != 1)) {
+   if ((reg != P && reg != Z && reg != M && reg != T && reg != E) || (value != 0 && value != 1)) 
+   {
     return -1;
-    }
+   }
 
     if (value)
         flags_register |= reg;
