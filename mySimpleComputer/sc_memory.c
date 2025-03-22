@@ -102,7 +102,10 @@ sc_printCell (int address, enum colors fg, enum colors bg)
     mt_setfgcolor (fg);
     mt_setbgcolor (bg);
     mt_gotoXY (row, col);
-    
-    printf ("%d", memory[address]); 
+
+    if(memory[address] >> 15 & 1)
+        printf ("-%04x", memory[address]); 
+    else
+        printf ("+%04x", memory[address]); 
 
 }
